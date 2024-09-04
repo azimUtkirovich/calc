@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: "Black Ops One", system-ui; */
+
+:root {
+    --calc-width: 465px;
+    --calc-height: 710px;
+    --calc-border-radius: 50px;
+
+    --primary-color: #8D57EC;
+    --border-color: #7E5DB6;
+    --shadow-color: #4F20A1;
+    --ac-btn-color: #C1A2F6;
+    --btn-color: white;
+
+    --primary-font: 'Montserrat', sans-serif;
+    --digital-font: "Black Ops One", system-ui;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 5px solid var(--border-color);
+    border-radius: var(--calc-border-radius);
+    width: var(--calc-width);
+    height: var(--calc-height);
+    padding-top: 30px;
+    background-color: var(--primary-color);
+    box-shadow: inset 0 0 3px 2px var(--shadow-color);
+}
+
+.calculator input {
+    width: calc(var(--calc-width) - 67px);
+    height: 113px;
+    background-color: gray;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 70px;
+    font-family: var(--digital-font);
+    text-align: right;
+}
+
+.keyboard {
+    width: inherit;
+    height: calc(var(--calc-height) - 190px);
+    padding: 0 20px 20px;
+}
+
+.lable {
+    color: white;
+    font-family: var(--digital-font);
+    font-size: 20px;
+    margin-left: -280px;
+}
+
+tbody {
+    text-align: center;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border-radius: 25%;
+    border: none;
+    background-color: var(--btn-color);
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px gray;
+}
+
+button:active:not(:disabled) {
+    box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1),
+        inset 0 1px 1px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.45);
+}
+
+.top-button {
+    height: 40px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+.clear {
+    background-color: var(--ac-btn-color);
+}
+
+.big-button-w,
+.big-button-h {
+    border-radius: 15px;
+}
+
+.big-button-w {
+    width: 153px;
+}
+
+.big-button-h {
+    height: 155px;
+}
